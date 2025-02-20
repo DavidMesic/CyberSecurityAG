@@ -28,7 +28,6 @@ body {
     width: 400px;
     padding: 30px;
 
-    /* Etwas Transparenz, damit der Hintergrund durchscheint */
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -55,10 +54,7 @@ body {
     color: #333;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="password"],
-.form-group input[type="date"] {
+.form-group input {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ddd;
@@ -71,16 +67,75 @@ body {
     outline: none;
 }
 
-/* Fake Captcha Container */
-.captcha-container {
-    flex-direction: row;
+/* ----- Fake reCAPTCHA Styling ----- */
+
+.fake-recaptcha-container {
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    padding: 12px;
+}
+
+.fake-recaptcha-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.fake-recaptcha-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.fake-recaptcha-checkbox label {
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+}
+
+.fake-recaptcha-footer {
+    display: flex;
     align-items: center;
 }
 
-.captcha-container input[type="checkbox"] {
-    width: auto;
+.fake-recaptcha-icon {
+    width: 18px;
+    height: 18px;
+    background-color: #4285f4;
+    border-radius: 2px;
+    margin-right: 6px;
+    position: relative;
+}
+
+.fake-recaptcha-icon::before {
+    content: "G";
+    position: absolute;
+    top: -2px;
+    left: 4px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.fake-recaptcha-text {
+    color: #666;
+    font-size: 13px;
     margin-right: 8px;
-    cursor: pointer;
+}
+
+.fake-recaptcha-privacy a {
+    color: #666;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 3px;
+}
+
+.fake-recaptcha-privacy a:hover {
+    text-decoration: underline;
 }
 
 /* Button-Styling */

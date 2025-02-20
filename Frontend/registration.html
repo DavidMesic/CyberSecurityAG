@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <title>Registration (Fake reCAPTCHA Style)</title>
 
     <!-- CSS-Dateien -->
     <link rel="stylesheet" href="registration.css">
     <link rel="stylesheet" href="Header/header.css">
     <link rel="stylesheet" href="Footer/footer.css">
 
-    <!-- Deine Skripte für Header & Footer -->
+    <!-- Header/Footer-Skripte -->
     <script src="header-footer-import.js"></script>
     <script src="Header/header.js"></script>
 
@@ -72,15 +72,25 @@
                 >
             </div>
 
-            <!-- Einfaches "Anti-Bot"-Kästchen (Fake-Captcha) -->
-            <div class="form-group captcha-container">
-                <input 
-                    type="checkbox" 
-                    id="not-robot" 
-                    name="not-robot" 
-                    required
-                >
-                <label for="not-robot">Ich bin kein Roboter</label>
+            <!-- Fake reCAPTCHA Container -->
+            <div class="fake-recaptcha-container">
+                <div class="fake-recaptcha-checkbox">
+                    <input 
+                        type="checkbox" 
+                        id="fake-captcha" 
+                        name="fake-captcha" 
+                        required
+                    />
+                    <label for="fake-captcha">I'm not a robot</label>
+                </div>
+                <div class="fake-recaptcha-footer">
+                    <div class="fake-recaptcha-icon"></div>
+                    <span class="fake-recaptcha-text">reCAPTCHA</span>
+                    <span class="fake-recaptcha-privacy">
+                        <a href="#privacy">Privacy</a> - 
+                        <a href="#terms">Terms</a>
+                    </span>
+                </div>
             </div>
 
             <div class="form-group">

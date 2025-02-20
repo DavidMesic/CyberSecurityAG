@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    /* Farbiger Hintergrund-Gradient */
+    /* Hintergrund mit Farbverlauf */
     background: linear-gradient(135deg, #a1c4fd, #c2e9fb 50%, #d4fc79);
 }
 
@@ -28,7 +28,6 @@ body {
     width: 350px;
     padding: 30px;
 
-    /* Etwas Transparenz, damit der Hintergrund durchscheint */
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -64,25 +63,86 @@ body {
     transition: border-color 0.3s;
 }
 
-.form-group input[type="email"]:focus,
-.form-group input[type="password"]:focus {
+.form-group input:focus {
     border-color: #5c9ded;
     outline: none;
 }
 
-/* Captcha Container (nur eine Checkbox) */
-.captcha-container {
-    flex-direction: row;
-    align-items: center;
+/* ----- Fake reCAPTCHA Styling ----- */
+
+.fake-recaptcha-container {
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    padding: 12px;
 }
 
-.captcha-container input[type="checkbox"] {
-    width: auto;
+.fake-recaptcha-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/* Checkbox */
+.fake-recaptcha-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
     margin-right: 8px;
     cursor: pointer;
 }
 
-/* Button-Styling */
+.fake-recaptcha-checkbox label {
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Footer (Icon + Links) */
+.fake-recaptcha-footer {
+    display: flex;
+    align-items: center;
+}
+
+.fake-recaptcha-icon {
+    width: 18px;
+    height: 18px;
+    background-color: #4285f4; /* Google-blau simulieren */
+    border-radius: 2px;
+    margin-right: 6px;
+    position: relative;
+}
+
+/* Ggf. ein "G" oder "shield"-Symbol faken? */
+.fake-recaptcha-icon::before {
+    content: "G";
+    position: absolute;
+    top: -2px;
+    left: 4px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.fake-recaptcha-text {
+    color: #666;
+    font-size: 13px;
+    margin-right: 8px;
+}
+
+.fake-recaptcha-privacy a {
+    color: #666;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 3px;
+}
+
+.fake-recaptcha-privacy a:hover {
+    text-decoration: underline;
+}
+
+/* ----- Button ----- */
 .form-group button {
     width: 100%;
     padding: 12px;

@@ -1,0 +1,6 @@
+@CyberSecurityAG_HostAddress = http://localhost:5017
+
+GET {{CyberSecurityAG_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

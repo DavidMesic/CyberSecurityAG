@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="Header/header.css">
     <link rel="stylesheet" href="Footer/footer.css">
 
-    <!-- reCAPTCHA-Skript -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-    <!-- Deine eigenen Skripte (für Header/Footer) -->
+    <!-- Deine Skripte für Header & Footer -->
     <script src="header-footer-import.js"></script>
     <script src="Header/header.js"></script>
 
@@ -21,8 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link 
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
-        rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
+      rel="stylesheet"
     >
 </head>
 <body>
@@ -48,18 +45,21 @@
                     type="password" 
                     id="password" 
                     name="password" 
-                    minlength="6" 
                     placeholder="Mind. 6 Zeichen" 
+                    minlength="6" 
                     required
                 >
             </div>
 
-            <!-- reCAPTCHA -->
-            <div class="captcha-container">
-                <div 
-                    class="g-recaptcha" 
-                    data-sitekey="YOUR_SITE_KEY_HERE"
-                ></div>
+            <!-- Einfaches "Anti-Bot"-Kästchen (Fake-Captcha) -->
+            <div class="form-group captcha-container">
+                <input 
+                    type="checkbox" 
+                    id="not-robot" 
+                    name="not-robot" 
+                    required
+                >
+                <label for="not-robot">Ich bin kein Roboter</label>
             </div>
 
             <div class="form-group">

@@ -55,7 +55,8 @@ body {
     color: #333;
 }
 
-.form-group input {
+.form-group input[type="email"],
+.form-group input[type="password"] {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ddd;
@@ -63,15 +64,22 @@ body {
     transition: border-color 0.3s;
 }
 
-.form-group input:focus {
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
     border-color: #5c9ded;
     outline: none;
 }
 
-/* Captcha-Container */
+/* Captcha Container (nur eine Checkbox) */
 .captcha-container {
-    margin-bottom: 15px;
-    text-align: center; /* reCAPTCHA zentrieren */
+    flex-direction: row;
+    align-items: center;
+}
+
+.captcha-container input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    cursor: pointer;
 }
 
 /* Button-Styling */

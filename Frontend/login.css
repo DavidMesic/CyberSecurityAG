@@ -1,5 +1,4 @@
 /* Grundlegendes Styling */
-
 * {
     margin: 0;
     padding: 0;
@@ -12,11 +11,10 @@ body {
     display: flex;
     flex-direction: column;
 
-    /* Schönes Hintergrund-Gradient-Design */
-    background: linear-gradient(135deg, #e2ebf0, #f3f3f3 50%, #ffffff);
+    /* Farbiger Hintergrund-Gradient */
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb 50%, #d4fc79);
 }
 
-/* Header & Footer sollen nicht skalieren */
 #header,
 #footer {
     flex-shrink: 0;
@@ -24,18 +22,16 @@ body {
 
 /* Login-Form Container */
 .login-form {
-    margin: auto; 
+    margin: auto;
     margin-top: 80px;
     margin-bottom: 80px;
     width: 350px;
     padding: 30px;
 
-    background-color: #fff;
+    /* Etwas Transparenz, damit der Hintergrund durchscheint */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-    /* Leichte Transparenz für ein schickes Aussehen */
-    background: rgba(255, 255, 255, 0.9);
 }
 
 .login-form h2 {
@@ -43,6 +39,7 @@ body {
     text-align: center;
     margin-bottom: 20px;
     font-weight: 600;
+    color: #333;
 }
 
 .form-group {
@@ -55,15 +52,14 @@ body {
     margin-bottom: 5px;
     font-size: 14px;
     font-weight: 400;
+    color: #333;
 }
 
 .form-group input {
     padding: 10px;
     font-size: 16px;
-
     border: 1px solid #ddd;
     border-radius: 4px;
-
     transition: border-color 0.3s;
 }
 
@@ -72,24 +68,22 @@ body {
     outline: none;
 }
 
-/* Captcha Container */
+/* Captcha-Container */
 .captcha-container {
     margin-bottom: 15px;
-    text-align: center; /* Zentriert reCAPTCHA */
+    text-align: center; /* reCAPTCHA zentrieren */
 }
 
+/* Button-Styling */
 .form-group button {
     width: 100%;
     padding: 12px;
-
     font-size: 16px;
     color: #fff;
     background-color: #5c9ded;
-
     border: none;
     border-radius: 4px;
     cursor: pointer;
-
     transition: background-color 0.3s;
 }
 
